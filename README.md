@@ -1,5 +1,4 @@
-# react-practice
-
-## 概要
-react.jsの練習
 # react-calculator
+
+## About
+react使って四則演算できる電卓作る。
