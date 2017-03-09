@@ -22,6 +22,7 @@ export const calculatorButton = React.createClass({
   }
 });
 
+/*
 export const operatorButton =  React.createClass({
-  
-});
+
+});*/
