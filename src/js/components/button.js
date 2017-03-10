@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+//コンポーネント定義
 export const calculatorButton = React.createClass({
 
   buttonClick: function(event) {
@@ -22,6 +23,6 @@ export const calculatorButton = React.createClass({
   }
 });
 
-export const operatorButton =  React.createClass({
-  
-});
+// export const operatorButton =  React.createClass({
+//
+// });

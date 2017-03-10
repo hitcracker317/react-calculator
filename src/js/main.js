@@ -2,16 +2,19 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 const add = require("./action/add.js");
+
 const button = require("./components/button.js");
+//const valueText = require("./components/value.js");
 
 const value1 = 30;
-const value2 = 15;
+const value2 = 45;
 
 onload = function(){
-  ReactDOM.render(
-    <h1>ハロー世界！！</h1>,
-    document.querySelector("#wrapper")
-  );
+  // ReactDOM.render(
+  //   <h1>ハロー世界！！</h1>,
+  //   document.querySelector("#wrapper")
+  // );
+
 
   //props
   class Add extends React.Component {
@@ -26,9 +29,18 @@ onload = function(){
       );
     }
   }
-  ReactDOM.render(<Add a={value1} b={value2} />,document.querySelector("#wrapper"));
+  //ReactDOM.render(<Add a={value1} b={value2} />,document.querySelector("#wrapper"));
 
-
-
+  ReactDOM.render(<button.calculatorButton value="100" />, document.querySelector("#wrapper")); //描画
   ReactDOM.render(<button.calculatorButton value="100" />, document.querySelector("#wrapper"));
+
+  ReactDOM.render(<valueText.valueText value="100" />, document.querySelector("#wrapper"));
+
+
+
+
+
+
+
+
 };
