@@ -1,28 +1,28 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-//コンポーネント定義
-export const calculatorButton = React.createClass({
 
-  buttonClick: function(event) {
-    //ボタンクリック時のイベント
-    const selectedValue = event.currentTarget.getAttribute("data-number");
-    alert(selectedValue + "をクリックしました!");
+const NumberButton = ({value}) => {
+  return (
+    <div className="button button__number">
+      <input type="button" value={value} onClick="" data-number={value} />
+    </div>
+  );
+};
 
-    //var answer = 4 + selectedValue + 2;
-    //alert(answer + "が商の値!");
-  },
+export class Calculator extends React.Component {
+
   render() {
-    const buttonValue = this.props.value;
+
+    var numberButtonArray = [];
+    for (var i = 1; i <= 9; i++) {
+      numberButtonArray.push(<NumberButton value={i}/>);
+    }
 
     return (
-      <div className="button">
-        <input type="button" value={buttonValue} onClick={this.buttonClick} data-number={buttonValue} />
+      <div className="numberbutton__wrapper">
+        {numberButtonArray}
       </div>
-    )
+    );
   }
-});
-
-// export const operatorButton =  React.createClass({
-//
-// });
+}

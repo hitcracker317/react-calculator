@@ -10,37 +10,5 @@ const value1 = 30;
 const value2 = 45;
 
 onload = function(){
-  // ReactDOM.render(
-  //   <h1>ハロー世界！！</h1>,
-  //   document.querySelector("#wrapper")
-  // );
-
-
-  //props
-  class Add extends React.Component {
-    render() {
-      const a = this.props.a;
-      const b = this.props.b;
-
-      const addValue = add.add(a,b);
-
-      return (
-        <div>{a}+{b}の値は：{addValue}</div>
-      );
-    }
-  }
-  //ReactDOM.render(<Add a={value1} b={value2} />,document.querySelector("#wrapper"));
-
-  ReactDOM.render(<button.calculatorButton value="100" />, document.querySelector("#wrapper")); //描画
-  ReactDOM.render(<button.calculatorButton value="100" />, document.querySelector("#wrapper"));
-
-  ReactDOM.render(<valueText.valueText value="100" />, document.querySelector("#wrapper"));
-
-
-
-
-
-
-
-
+  ReactDOM.render(<button.Calculator />, document.querySelector("#wrapper")); //描画
 };
