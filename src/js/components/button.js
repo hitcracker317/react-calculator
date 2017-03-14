@@ -10,6 +10,57 @@ const NumberButton = ({value}) => {
   );
 };
 
+
+const CalculatorButton = ({operator}) => {
+
+  switch (operator) {
+    case "=":
+        return (
+          <div className="button button__calc">
+            <input type="button" value={operator} onClick="" data-number={operator} />
+          </div>
+        );
+      break;
+
+    case "+":
+        return (
+          <div className="button button__calc">
+            <input type="button" value={operator} onClick="" data-number={operator} />
+          </div>
+        );
+      break;
+
+    case "-":
+        return (
+          <div className="button button__calc">
+            <input type="button" value={operator} onClick="" data-number={operator} />
+          </div>
+        );
+      break;
+
+    case "×":
+        return (
+          <div className="button button__calc">
+            <input type="button" value={operator} onClick="" data-number={operator} />
+          </div>
+        );
+      break;
+
+    case "÷":
+        return (
+          <div className="button button__calc">
+            <input type="button" value={operator} onClick="" data-number={operator} />
+          </div>
+        );
+      break;
+    default:
+
+
+  }
+
+};
+
+
 export class Calculator extends React.Component {
 
   render() {
@@ -20,9 +71,26 @@ export class Calculator extends React.Component {
     }
 
     return (
-      <div className="numberbutton__wrapper">
-        {numberButtonArray}
+      <div className="button__wrapper">
+        <NumberButton value={7}/>
+        <NumberButton value={8}/>
+        <NumberButton value={9}/>
+        <CalculatorButton operator="÷"/>
+        <NumberButton value={4}/>
+        <NumberButton value={5}/>
+        <NumberButton value={6}/>
+        <CalculatorButton operator="×"/>
+        <NumberButton value={1}/>
+        <NumberButton value={2}/>
+        <NumberButton value={3}/>
+        <CalculatorButton operator="-"/>
+        <NumberButton value={0}/>
+        <NumberButton value={"."}/>
+        <CalculatorButton operator="="/>
+        <CalculatorButton operator="+"/>
       </div>
+
+
     );
   }
 }
