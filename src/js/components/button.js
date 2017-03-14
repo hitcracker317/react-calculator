@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+const CalcValue = require("./value.js");
 
 const NumberButton = ({value}) => {
   return (
@@ -54,10 +55,7 @@ const CalculatorButton = ({operator}) => {
         );
       break;
     default:
-
-
   }
-
 };
 
 
@@ -71,23 +69,29 @@ export class Calculator extends React.Component {
     }
 
     return (
-      <div className="button__wrapper">
-        <NumberButton value={7}/>
-        <NumberButton value={8}/>
-        <NumberButton value={9}/>
-        <CalculatorButton operator="÷"/>
-        <NumberButton value={4}/>
-        <NumberButton value={5}/>
-        <NumberButton value={6}/>
-        <CalculatorButton operator="×"/>
-        <NumberButton value={1}/>
-        <NumberButton value={2}/>
-        <NumberButton value={3}/>
-        <CalculatorButton operator="-"/>
-        <NumberButton value={0}/>
-        <NumberButton value={"."}/>
-        <CalculatorButton operator="="/>
-        <CalculatorButton operator="+"/>
+      <div className="calc__inner">
+
+        <CalcValue.CalculatorValue />
+
+        <div className="button__wrapper">
+          <NumberButton value={7}/>
+          <NumberButton value={8}/>
+          <NumberButton value={9}/>
+          <CalculatorButton operator="÷"/>
+          <NumberButton value={4}/>
+          <NumberButton value={5}/>
+          <NumberButton value={6}/>
+          <CalculatorButton operator="×"/>
+          <NumberButton value={1}/>
+          <NumberButton value={2}/>
+          <NumberButton value={3}/>
+          <CalculatorButton operator="-"/>
+          <NumberButton value={0}/>
+          <NumberButton value={"."}/>
+          <CalculatorButton operator="="/>
+          <CalculatorButton operator="+"/>
+        </div>
+
       </div>
     );
   }
