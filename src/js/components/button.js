@@ -5,7 +5,7 @@ import ReactDOM from "react-dom";
 const NumberButton = ({value}) => {
   return (
     <div className="button button__number">
-      <input type="button" value={value} onClick="" data-number={value} />
+      <input type="button" value={value} onClick="" data-number={value} className="button__inner"/>
     </div>
   );
 };
@@ -17,7 +17,7 @@ const CalculatorButton = ({operator}) => {
     case "=":
         return (
           <div className="button button__calc">
-            <input type="button" value={operator} onClick="" data-number={operator} />
+            <input type="button" value={operator} onClick="" data-number={operator} className="button__inner"/>
           </div>
         );
       break;
@@ -25,7 +25,7 @@ const CalculatorButton = ({operator}) => {
     case "+":
         return (
           <div className="button button__calc">
-            <input type="button" value={operator} onClick="" data-number={operator} />
+            <input type="button" value={operator} onClick="" data-number={operator} className="button__inner"/>
           </div>
         );
       break;
@@ -33,7 +33,7 @@ const CalculatorButton = ({operator}) => {
     case "-":
         return (
           <div className="button button__calc">
-            <input type="button" value={operator} onClick="" data-number={operator} />
+            <input type="button" value={operator} onClick="" data-number={operator} className="button__inner"/>
           </div>
         );
       break;
@@ -41,7 +41,7 @@ const CalculatorButton = ({operator}) => {
     case "×":
         return (
           <div className="button button__calc">
-            <input type="button" value={operator} onClick="" data-number={operator} />
+            <input type="button" value={operator} onClick="" data-number={operator} className="button__inner"/>
           </div>
         );
       break;
@@ -49,7 +49,7 @@ const CalculatorButton = ({operator}) => {
     case "÷":
         return (
           <div className="button button__calc">
-            <input type="button" value={operator} onClick="" data-number={operator} />
+            <input type="button" value={operator} onClick="" data-number={operator} className="button__inner"/>
           </div>
         );
       break;
@@ -89,8 +89,6 @@ export class Calculator extends React.Component {
         <CalculatorButton operator="="/>
         <CalculatorButton operator="+"/>
       </div>
-
-
     );
   }
 }

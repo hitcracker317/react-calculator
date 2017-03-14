@@ -10,5 +10,5 @@ const value1 = 30;
 const value2 = 45;
 
 onload = function(){
-  ReactDOM.render(<button.Calculator />, document.querySelector("#wrapper")); //描画
+  ReactDOM.render(<button.Calculator />, document.querySelector("#calc__wrapper")); //描画
 };
