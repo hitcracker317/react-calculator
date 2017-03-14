@@ -44,7 +44,8 @@ var src = {
   sass: srcPath + "sass/",
   js: srcPath + "js/",
   img: srcPath + "img/",
-  sprite: srcPath + "img/sprite/"
+  sprite: srcPath + "img/sprite/",
+  font: srcPath + "font/"
 }
 
 var destPath = "dest/";
@@ -54,7 +55,7 @@ var dest = {
   js: destPath + "asset/js/",
   jsmin: destPath + "asset/jsmin/",
   img: destPath + "asset/img/",
-  sprite: destPath + "asset/img/sprite/"
+  font: destPath + "asset/font"
 }
 
 
@@ -203,6 +204,15 @@ gulp.task("sprite-min", function() {
   .pipe(gulp.dest(dest.sprite));
 });
 
+/* ------------------------
+font
+------------------------ */
+gulp.task("font", function () {
+  console.log("---------- フォント ----------");
+  gulp.src(src.font + "/**.ttf")
+  .pipe(gulp.dest(dest.font));
+});
+
 
 //監視
 gulp.task("watch", function(){
@@ -211,6 +221,7 @@ gulp.task("watch", function(){
   gulp.watch(src.js + "/**/*.js",["js"]);
   gulp.watch(src.img + "/**/*.+(jpg|jpeg|png|gif)",["imagemin"]);
   gulp.watch(src.sprite + "/**/*.+(jpg|jpeg|png|gif)",["sprite"]);
+  gulp.watch(src.font + "/**/*.ttf",["font"]);
 });
 
 //ローカルサーバー
@@ -224,4 +235,4 @@ gulp.task("browser-sync", function(){
   });
 });
 
-gulp.task("default",["ejs","sass","js","imagemin","sprite","watch","browser-sync"]);
+gulp.task("default",["ejs","sass","js","imagemin","sprite","font","watch","browser-sync"]);

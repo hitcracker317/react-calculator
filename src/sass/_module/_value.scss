@@ -2,7 +2,6 @@ $value_height: 80px;
 
 .value {
   width: 100%;
-
   margin-bottom: 25px;
   background-color: darken($calc_color, 35%);
 
@@ -11,8 +10,9 @@ $value_height: 80px;
     padding: 0px 15px;
     height: $value_height;
 
-    font-size: 4.5rem;
-    line-height: $value_height;
+    font-size: 5.0rem;
+    font-family:'LettersLaughingattheirExecution';
+    line-height: calc(#{$value_height} + 15px);
     text-align: right;
   }
 

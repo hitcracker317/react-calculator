@@ -31,6 +31,10 @@ body {
   background: $back_ground_color;
 }
 
+@font-face {
+  font-family:'LettersLaughingattheirExecution';
+  src: url('../font/LettersLaughingattheirExecution.ttf');
+}
 
 ol, li {
   list-style-type: none;
