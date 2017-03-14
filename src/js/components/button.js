@@ -16,7 +16,7 @@ const CalculatorButton = ({operator}) => {
   switch (operator) {
     case "=":
         return (
-          <div className="button button__calc">
+          <div className="button button__equal">
             <input type="button" value={operator} onClick="" data-number={operator} className="button__inner"/>
           </div>
         );
